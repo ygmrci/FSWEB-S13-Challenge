@@ -8,34 +8,34 @@ public class Employee {
     private String fullName;
     private String email;
     private String password;
-    private String[] healthplans;
+    private String[] healthPlans;
 
-    // 5 alanın hepsini set eden constructor
-    public Employee(long id, String fullName, String email, String password, String[] healthplans) {
+
+    public Employee(long id, String fullName, String email, String password, String[] healthPlans) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
-        this.healthplans = healthplans;
+        this.healthPlans = healthPlans;
     }
 
-    // healthplans dizisine index'e göre name atar
-    public void addHealthplan(int index, String name) {
-        if (healthplans == null) {
-            System.out.println("healthplans dizisi null. Önce dizi oluşturmalısın.");
+
+    public void addHealthPlan(int index, String name) {
+        if (healthPlans == null) {
+            System.out.println("healthPlans dizisi null. Önce dizi oluşturmalısın.");
             return;
         }
 
-        if (index < 0 || index >= healthplans.length) {
-            System.out.println("Geçersiz index! (index: " + index + ") Dizi boyutu: " + healthplans.length);
+        if (index < 0 || index >= healthPlans.length) {
+            System.out.println("Geçersiz index! (index: " + index + ") Dizi boyutu: " + healthPlans.length);
             return;
         }
 
-        if (healthplans[index] == null) {
-            healthplans[index] = name;
+        if (healthPlans[index] == null) {
+            healthPlans[index] = name;
             System.out.println("Healthplan eklendi: index " + index + " -> " + name);
         } else {
-            System.out.println("Bu index dolu! (index: " + index + ") Mevcut değer: " + healthplans[index]);
+            System.out.println("Bu index dolu! (index: " + index + ") Mevcut değer: " + healthPlans[index]);
         }
     }
 
@@ -71,12 +71,12 @@ public class Employee {
         this.password = password;
     }
 
-    public String[] getHealthplans() {
-        return healthplans;
+    public String[] getHealthPlans() {
+        return healthPlans;
     }
 
-    public void setHealthplans(String[] healthplans) {
-        this.healthplans = healthplans;
+    public void setHealthPlans(String[] healthPlans) {
+        this.healthPlans = healthPlans;
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Employee {
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", healthplans=" + Arrays.toString(healthplans) +
+                ", healthplans=" + Arrays.toString(healthPlans) +
                 '}';
     }
 }

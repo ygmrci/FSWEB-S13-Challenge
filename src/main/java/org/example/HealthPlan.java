@@ -2,13 +2,13 @@ package org.example;
 import org.example.enums.Plan;
 
 
-public class Healthplan {
+public class HealthPlan {
 
     private long id;
     private  String name;
     private  Plan plan;
 
-    public Healthplan(long id, String name, Plan plan){
+    public HealthPlan(long id, String name, Plan plan){
         this.name= name;
         this.id = id;
         this.plan= plan;
@@ -33,7 +33,7 @@ public class Healthplan {
     }
 
     public String toString(){
-        return "Healthplan{" +
+        return "HealthPlan{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", plan=" + plan +

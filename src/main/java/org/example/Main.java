@@ -9,9 +9,9 @@ public class Main {
 
     private static void runTask3() {
 
-        Healthplan hp1 = new Healthplan(1L, "Default Health Plan", Plan.BASIC);
+        HealthPlan hp1 = new HealthPlan(1L, "Default Health Plan", Plan.BASIC);
 
-        // ✅ Employee objesi
+
         Employee emp1 = new Employee(
                 10L,
                 "Yagmur Cimen",
@@ -19,9 +19,9 @@ public class Main {
                 "Aa1!aaaa",
                 new String[3]
         );
-        emp1.addHealthplan(0, Plan.BASIC.name());
-        emp1.addHealthplan(0, Plan.VIP.name());
-        emp1.addHealthplan(5, "PREMIUM");
+        emp1.addHealthPlan(0, Plan.BASIC.name());
+        emp1.addHealthPlan(0, Plan.VIP.name());
+        emp1.addHealthPlan(5, "PREMIUM");
 
 
         Company company1 = new Company(
