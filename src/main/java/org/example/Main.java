@@ -9,11 +9,11 @@ public class Main {
 
     private static void runTask3() {
 
-        HealthPlan hp1 = new HealthPlan(1L, "Default Health Plan", Plan.BASIC);
+        HealthPlan hp1 = new HealthPlan(1, "Default Health Plan", Plan.BASIC);
 
 
         Employee emp1 = new Employee(
-                10L,
+                1,
                 "Yagmur Cimen",
                 "yagmurgamzecimen@mail.com",
                 "Aa1!aaaa",
@@ -25,7 +25,7 @@ public class Main {
 
 
         Company company1 = new Company(
-                100L,
+                10,
                 "Workintech",
                 -5000,
                 new String[2]
