@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class Employee {
 
-    private long id;
+    private int id;
     private String fullName;
     private String email;
     private String password;
     private String[] healthPlans;
 
 
-    public Employee(long id, String fullName, String email, String password, String[] healthPlans) {
+    public Employee(int id, String fullName, String email, String password, String[] healthPlans) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
@@ -43,7 +43,7 @@ public class Employee {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
