@@ -111,8 +111,8 @@ public class CompanyTest {
         Field emailField = company.getClass().getDeclaredField("giro");
         assertEquals(emailField.getModifiers(), 2);
 
-        Field healthPlans = company.getClass().getDeclaredField("developerNames");
-        assertEquals(healthPlans.getModifiers(), 2);
+        Field healthplans = company.getClass().getDeclaredField("developerNames");
+        assertEquals(healthplans.getModifiers(), 2);
     }
 
     @DisplayName("Company sınıf değişkenleri doğru tipte mi ?")
