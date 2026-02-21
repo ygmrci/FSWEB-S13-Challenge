@@ -9,7 +9,7 @@ public class Company {
     private double giro;
     private String[] developerNames;
 
-
+//Company'nin constructor'ı
     public Company(long id, String name, double giro, String[] developerNames) {
         this.id = id;
         this.name = name;
