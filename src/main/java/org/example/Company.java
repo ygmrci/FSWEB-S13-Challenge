@@ -4,21 +4,19 @@ import java.util.Arrays;
 
 public class Company {
 
-    private long id;
+    private Integer id;
     private String name;
     private double giro;
     private String[] developerNames;
 
-//Company'nin constructor'ı
-    public Company(long id, String name, double giro, String[] developerNames) {
+    public Company(Integer id, String name, double giro, String[] developerNames) {
         this.id = id;
         this.name = name;
-        setGiro(giro);
+        setGiro(giro);           // negatif kontrolü burada
         this.developerNames = developerNames;
     }
 
-
-    public void addEmployee(int index, String name) {
+    public void addEmployee(int index, String employeeName) {
         if (developerNames == null) {
             System.out.println("developerNames dizisi null. Önce dizi oluşturmalısın.");
             return;
@@ -30,18 +28,18 @@ public class Company {
         }
 
         if (developerNames[index] == null) {
-            developerNames[index] = name;
-            System.out.println("Employee eklendi: index " + index + " -> " + name);
+            developerNames[index] = employeeName;
+            System.out.println("Employee eklendi: index " + index + " -> " + employeeName);
         } else {
             System.out.println("Bu index dolu! (index: " + index + ") Mevcut değer: " + developerNames[index]);
         }
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -57,8 +55,8 @@ public class Company {
         return giro;
     }
 
-
     public void setGiro(double giro) {
+        // README: giro hiçbir zaman 0'ın altında olamaz
         if (giro < 0) {
             this.giro = 0;
         } else {

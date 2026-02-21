@@ -2,14 +2,14 @@ package org.example.enums;
 
 public enum Plan {
 
-    BASIC("Basic", 100.0),
-    PREMIUM("Premium", 200.0),
-    VIP("VIP", 300.0);
+    BASIC("Basic Plan", 100),
+    PREMIUM("Premium Plan", 200),
+    VIP("VIP Plan", 300);
 
-    private final String name;
-    private final double price;
+    private String name;
+    private Integer price;
 
-    Plan(String name, double price) {
+    Plan(String name, Integer price) {
         this.name = name;
         this.price = price;
     }
@@ -18,7 +18,15 @@ public enum Plan {
         return name;
     }
 
-    public double getPrice() {
+    public Integer getPrice() {
         return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Plan{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

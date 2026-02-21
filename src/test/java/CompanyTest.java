@@ -85,18 +85,18 @@ public class CompanyTest {
     public void testEmployeeInstanceTypes() throws NoSuchFieldException {
         assertThat(employee.getFullName(), instanceOf(String.class));
         assertThat(employee.getEmail(), instanceOf(String.class));
-        assertThat(employee.getHealthplans(), instanceOf(String[].class));
+        assertThat(employee.getHealthPlans(), instanceOf(String[].class));
     }
 
     @DisplayName("addHealthplan method başarılı çalışıyor mu?")
     @Test
     public void testAddHealthplanMethod() throws NoSuchFieldException {
-        employee.addHealthplan(-1, "Test Sigorta");
-        assertEquals(!Arrays.asList(employee.getHealthplans()).contains("Test Sigorta"), true);
-        employee.addHealthplan(0, "Test Sigorta");
-        assertEquals(!Arrays.asList(employee.getHealthplans()).contains("Test Sigorta"), true);
-        employee.addHealthplan(1, "Test Sigorta");
-        assertEquals(Arrays.asList(employee.getHealthplans()).contains("Test Sigorta"), true);
+        employee.addHealthPlan(-1, "Test Sigorta");
+        assertEquals(!Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
+        employee.addHealthPlan(0, "Test Sigorta");
+        assertEquals(!Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
+        employee.addHealthPlan(1, "Test Sigorta");
+        assertEquals(Arrays.asList(employee.getHealthPlans()).contains("Test Sigorta"), true);
     }
 
     @DisplayName("Company sınıf değişkenleri doğru access modifier a sahip mi ?")
@@ -111,8 +111,8 @@ public class CompanyTest {
         Field emailField = company.getClass().getDeclaredField("giro");
         assertEquals(emailField.getModifiers(), 2);
 
-        Field healthplans = company.getClass().getDeclaredField("developerNames");
-        assertEquals(healthplans.getModifiers(), 2);
+        Field healthPlans = company.getClass().getDeclaredField("developerNames");
+        assertEquals(healthPlans.getModifiers(), 2);
     }
 
     @DisplayName("Company sınıf değişkenleri doğru tipte mi ?")

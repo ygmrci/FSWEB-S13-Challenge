@@ -8,9 +8,8 @@ public class Employee {
     private String fullName;
     private String email;
     private String password;
-    private String[] healthPlans;
+    private String[] healthPlans;   // TEST: field adı tam olarak "healthPlans"
 
-    // Employee'nin constructor'ı
     public Employee(Integer id, String fullName, String email, String password, String[] healthPlans) {
         this.id = id;
         this.fullName = fullName;
@@ -19,7 +18,13 @@ public class Employee {
         this.healthPlans = healthPlans;
     }
 
+    // README'deki isim
     public void addHealthplan(int index, String name) {
+        addHealthPlan(index, name);
+    }
+
+    // TEST'in çağırdığı isim
+    public void addHealthPlan(int index, String name) {
         if (healthPlans == null) {
             System.out.println("healthPlans dizisi null. Önce dizi oluşturmalısın.");
             return;
@@ -70,6 +75,7 @@ public class Employee {
         this.password = password;
     }
 
+    // TEST: getHealthPlans()
     public String[] getHealthPlans() {
         return healthPlans;
     }
